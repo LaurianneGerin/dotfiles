@@ -2,7 +2,8 @@ ZSH=$HOME/.oh-my-zsh
 
 # You can change the theme with another one:
 #   https://github.com/robbyrussell/oh-my-zsh/wiki/themes
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="wild-cherry"
 
 # Add ruby version on prompt (float right)
 RPS1='[$(ruby_prompt_info)]$EPS1'
@@ -23,4 +24,20 @@ export PATH="./bin:${PATH}"
 # Encoding stuff for the terminal
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+export NVM_DIR="/Users/Laurianne/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f /Users/Laurianne/code/LaurianneGerin/google-cloud-sdk/path.zsh.inc ]; then
+  source '/Users/Laurianne/code/LaurianneGerin/google-cloud-sdk/path.zsh.inc'
+fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f /Users/Laurianne/code/LaurianneGerin/google-cloud-sdk/completion.zsh.inc ]; then
+  source '/Users/Laurianne/code/LaurianneGerin/google-cloud-sdk/completion.zsh.inc'
+fi
 export BUNDLER_EDITOR="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"

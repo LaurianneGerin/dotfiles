@@ -5,3 +5,8 @@ alias speedtest="wget -O /dev/null http://speedtest.wdc01.softlayer.com/download
 
 # Quickly serve the current directory as HTTP
 alias serve='ruby -run -e httpd . -p 8000'  # Or python -m SimpleHTTPServer :)
+
+# Bump for git tags
+bump () {
+	git commit -m "Bump to v$1" && git tag -a "v$1" -m "Bumped to version v$1"
+}
